@@ -67,11 +67,6 @@ bool check_pattern(state cells[], int len) {
   long new_pattern = 0UL;
   int alive_count = 0;
   bool to_return = false;
-//  for (int i = 0; i < len; i++){
-//    Serial.print(cells[i]);
-//    Serial.print(" ");
-//  }
-//  Serial.println();
   for (int i = 0; i < len; i++){
     if (is_alive(cells[i])) {
       new_pattern = new_pattern ^ (1UL << i);
