@@ -56,7 +56,7 @@ void loop() {
   if (extinction) {
     onboard_new_color = extinction_color;
   } else {
-    onboard_new_color = blend(dead_color, alive_color, (alive_count / CELLS) * 255);
+    onboard_new_color = blend(dead_color, alive_color, (alive_count * 255) / CELLS);
   }
   
   for (int i = 0; i < CELLS; i++) {
